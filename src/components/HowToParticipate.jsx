@@ -8,11 +8,11 @@ const bankDetails = [
   },
   {
     label: 'Account #',
-    value: '601000451200058',
+    value: '6010004521200058',
   },
   {
     label: 'IBAN',
-    value: 'PK41BPUN601000451200058',
+    value: 'PK41BPUN6010004521200058',
   },
   {
     label: 'Bank Name',

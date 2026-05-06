@@ -4,6 +4,7 @@ import styles from './SaveYourSpot.module.css';
 export default function SaveYourSpot() {
   return (
     <section className={styles.section} id="legacy">
+      <div className={styles.bgGradient} />
       <div className={`container ${styles.inner}`}>
         {/* Left */}
         <div className={styles.left}>

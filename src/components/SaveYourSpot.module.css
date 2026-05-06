@@ -1,8 +1,20 @@
 .section {
-    background: #0e0b1c;
+    background:
+      url('https://i0.wp.com/jaamiah.com/wp-content/uploads/2018/12/CUST-Islamabad-Image-1.jpg') center/cover no-repeat;
     padding: 100px 0;
     position: relative;
     overflow: hidden;
+  }
+  .bgGradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to left,
+      rgba(10, 10, 14, 0.5) 10%,
+      rgba(10, 10, 14, 0.15) 50%,
+      rgba(10, 10, 14, 0.10) 100%
+    );
+    z-index: 2;
   }
   
   .section::before {
@@ -12,7 +24,7 @@
     left: -80px;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(63, 61, 66, 0.12) 0%, transparent 70%);
     pointer-events: none;
   }
   
@@ -87,8 +99,8 @@
   }
   
   .eventCard {
-    background: #1e1535;
-    border: 1px solid rgba(124, 58, 237, 0.3);
+    background: #a8a8a8ef;
+    border: 1px solid rgba(167, 165, 170, 0.3);
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
@@ -116,7 +128,7 @@
     font-family: var(--font-display);
     font-size: 36px;
     font-weight: 800;
-    color: #a78bfa;
+    color: #ffffff;
     margin-top: 10px;
   }
   
@@ -131,7 +143,7 @@
   
   .year {
     font-size: 14px;
-    color: #a78bfa;
+    color: #fefeff;
     font-weight: 600;
     margin-bottom: 20px;
   }
@@ -147,7 +159,7 @@
     border: 1px solid rgba(124, 58, 237, 0.25);
     border-radius: 10px;
     font-size: 13px;
-    color: rgba(255,255,255,0.7);
+    color: rgb(255, 255, 255);
     font-weight: 500;
   }
   
