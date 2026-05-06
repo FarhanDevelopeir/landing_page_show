@@ -129,6 +129,7 @@ import Hero from './components/Hero';
 import ChampionshipTracks from './components/ChampionshipTracks';
 import EventTimeline from './components/EventTimeline';
 import SaveYourSpot from './components/SaveYourSpot';
+import HowToParticipate from './components/HowToParticipate';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -139,6 +140,7 @@ export default function App() {
       <ChampionshipTracks />
       <EventTimeline />
       <SaveYourSpot />
+      <HowToParticipate />
       <Footer />
     </>
   );

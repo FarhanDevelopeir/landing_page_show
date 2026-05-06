@@ -1,8 +1,19 @@
-import {  Zap, MapPin, Mail, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, UserRound, Zap } from 'lucide-react';
 import styles from './Footer.module.css';
 
-const quickLinks = ['Competitions', 'Schedule', 'Culture', 'Rules & Guidelines'];
-const resources = ['Registration', 'FAQ', 'Past Events', 'Sponsors'];
+const quickLinks = [
+  { label: 'Competitions', href: '#tracks' },
+  { label: 'Schedule', href: '#timeline' },
+  { label: 'Registration', href: '#participate' },
+  { label: 'Event Details', href: '#legacy' },
+];
+
+const resources = [
+  { label: 'How To Participate', href: '#participate' },
+  { label: 'Timeline', href: '#timeline' },
+  { label: 'Venue', href: '#rules' },
+  { label: 'Official Contact', href: '#rules' },
+];
 
 export default function Footer() {
   return (
@@ -33,9 +44,9 @@ export default function Footer() {
           <div className={styles.col}>
             <h4 className={styles.colTitle}>Quick Links</h4>
             <ul className={styles.linkList}>
-              {quickLinks.map(link => (
-                <li key={link}>
-                  <a href="#" className={styles.link}>{link}</a>
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className={styles.link}>{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -45,9 +56,9 @@ export default function Footer() {
           <div className={styles.col}>
             <h4 className={styles.colTitle}>Resources</h4>
             <ul className={styles.linkList}>
-              {resources.map(link => (
-                <li key={link}>
-                  <a href="#" className={styles.link}>{link}</a>
+              {resources.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className={styles.link}>{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -58,16 +69,37 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Contact Us</h4>
             <div className={styles.contactList}>
               <div className={styles.contactItem}>
-                <MapPin size={14} className={styles.contactIcon} />
-                <span>Capital University of Science and Technology, Islamabad</span>
-              </div>
-              <div className={styles.contactItem}>
-                <Mail size={14} className={styles.contactIcon} />
-                <span>excite@cust.edu.pk</span>
+                <UserRound size={14} className={styles.contactIcon} />
+                <div>
+                  <p className={styles.contactLabel}>Coordinator</p>
+                  <p className={styles.contactText}>Mr. Ibtisam Zia</p>
+                </div>
               </div>
               <div className={styles.contactItem}>
                 <Phone size={14} className={styles.contactIcon} />
-                <span>+92 xxx xxxxxxx</span>
+                <div>
+                  <p className={styles.contactLabel}>Phone</p>
+                  <a href="tel:+923350518478" className={styles.contactLink}>0335-0518478</a>
+                </div>
+              </div>
+              <div className={styles.contactItem}>
+                <Mail size={14} className={styles.contactIcon} />
+                <div>
+                  <p className={styles.contactLabel}>Email</p>
+                  <a href="mailto:ibtisam.zia@cust.edu.pk" className={styles.contactLink}>
+                    ibtisam.zia@cust.edu.pk
+                  </a>
+                </div>
+              </div>
+              <div className={styles.contactItem}>
+                <MapPin size={14} className={styles.contactIcon} />
+                <div>
+                  <p className={styles.contactLabel}>Address</p>
+                  <p className={styles.contactText}>
+                    Capital University of Science and Technology, Islamabad Expressway,
+                    Zone V, Islamabad, Pakistan
+                  </p>
+                </div>
               </div>
             </div>
           </div>
