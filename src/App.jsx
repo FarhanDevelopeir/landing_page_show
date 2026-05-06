@@ -139,8 +139,8 @@ export default function App() {
       <Hero />
       <ChampionshipTracks />
       <EventTimeline />
-      <SaveYourSpot />
       <HowToParticipate />
+      <SaveYourSpot />
       <Footer />
     </>
   );
