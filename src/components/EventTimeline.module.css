@@ -1,0 +1,161 @@
+.section {
+    padding: 100px 0;
+    background: #0c0c10;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: rgba(255,255,255,0.45);
+  }
+  
+  .blue {
+    color: #3b82f6;
+  }
+  
+  /* Timeline */
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  
+  .line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,0.08);
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Dot */
+  .dotWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3b82f6;
+    border: 3px solid #0c0c10;
+    box-shadow: 0 0 0 2px #3b82f6;
+    flex-shrink: 0;
+  }
+  
+  /* Time */
+  .timeWrap {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rowRight .timeWrap {
+    justify-content: flex-end;
+  }
+  
+  .rowLeft .timeWrap {
+    justify-content: flex-start;
+  }
+  
+  .time {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 800;
+    color: #3b82f6;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Card */
+  .card {
+    background: #141418;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  
+  .cardTitle {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  
+  .cardDesc {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .timeline {
+      gap: 24px;
+    }
+  
+    .line {
+      left: 16px;
+    }
+  
+    .row {
+      grid-template-columns: 32px 1fr;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+  
+    .rowRight,
+    .rowLeft {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 14px;
+    }
+  
+    .dotWrap {
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+  
+    .timeWrap {
+      display: none;
+    }
+  
+    .card {
+      flex: 1;
+      padding: 14px 16px;
+    }
+  
+    .cardTitle {
+      font-size: 13px;
+    }
+  }
