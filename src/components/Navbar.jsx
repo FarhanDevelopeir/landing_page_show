@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { User, Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
+import logo from '../assets/logo.png';
 
 const navLinks = ['Arena', 'Tracks', 'Timeline', 'Legacy', 'Rules'];
 
@@ -20,13 +21,14 @@ export default function Navbar() {
       <div className={styles.inner}>
         {/* Logo */}
         <a href="#" className={styles.logo}>
-          <span className={styles.logoIcon}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#3b82f6" stroke="#3b82f6" strokeWidth="1" strokeLinejoin="round"/>
-            </svg>
-          </span>
+          {/* <span className={styles.logoIcon}> */}
+            {/* <svg width="20" height="20" viewBox="0 0 24 24" fill="none"> */}
+              <img src={logo} alt="CUST Logo" width={40} height={40} className={styles.logoIcon} />
+              {/* <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#3b82f6" sWtroke="#3b82f6" strokeWidth="1" strokeLinejoin="round"/> */}
+            {/* </svg> */}
+          {/* </span> */}
           <span className={styles.logoText}>
-            EXC<span className={styles.logoHighlight}>IT</span>E CUP 2026
+            {/* EXC<span className={styles.logoHighlight}>IT</span>E CUP 2026 */}
           </span>
         </a>
 
